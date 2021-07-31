@@ -2,7 +2,7 @@
 /* jshint node: true */
 
 //Correct vdf for little endian handle ?
-var vdf = require('vdf'),
+var vdf = require('simple-vdf'),
 	fs = require('fs'),
 	winston = require('winston'),
 	misc = require('./miscHelper'),

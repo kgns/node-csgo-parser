@@ -1,6 +1,6 @@
 {
-  "name": "node-csgo-parser",
-  "version": "0.0.4",
+  "name": "csgo-items-parser",
+  "version": "0.0.5",
   "description": "Extract Items/Skins/... from raw VDF data files",
   "main": "lib/csgo-data-parser.js",
   "readmeFilename": "README.md",
@@ -8,7 +8,7 @@
   "directories": {},
   "repository": {
     "type": "git",
-    "url": "git://github.com/Ballrock/node-csgo-parser.git"
+    "url": "git://github.com/kgns/node-csgo-parser.git"
   },
   "dependencies": {
     "simple-vdf": "^1.1.1",

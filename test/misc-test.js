@@ -32,15 +32,15 @@ describe('CSGOParser Misc', function(){
 	    ]
 	};
 
-	describe('Private Object Prototype getValue', function() {
-		it('getValue caps', function() {
-			assert.equal(deagle.getValue('NAME'), deagle.name);
+	describe('Private Object Prototype getLangValue', function() {
+		it('getLangValue caps', function() {
+			assert.equal(deagle.getLangValue('NAME'), deagle.name);
 		});
-		it('getValue normal', function() {
-			assert.equal(deagle.getValue('name'), deagle.name);
+		it('getLangValue normal', function() {
+			assert.equal(deagle.getLangValue('name'), deagle.name);
 		});
-		it('getValue mix', function() {
-			assert.equal(deagle.getValue('NaMe'), deagle.name);
+		it('getLangValue mix', function() {
+			assert.equal(deagle.getLangValue('NaMe'), deagle.name);
 		});
 	});
 

@@ -8,7 +8,7 @@
  * @return {Object} Data.
  * @private
  */
-Object.defineProperty(Object.prototype, 'getValue', {
+Object.defineProperty(Object.prototype, 'getLangValue', {
     value: function (prop) {
         var self = this;
         for (var key in self) {

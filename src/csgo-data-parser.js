@@ -351,7 +351,7 @@ class CSGODataParser {
 		/*jshint eqeqeq: false, eqnull:true*/
 		var traduction;
 		if (this.isLangInitialized()){
-			traduction = this.langData.lang.Tokens.getValue(keyLang.prepareLang());
+			traduction = this.langData.lang.Tokens.getLangValue(keyLang.prepareLang());
 			if (traduction == null) {
 				traduction = keyLang;
 			} 
@@ -531,6 +531,25 @@ class CSGODataParser {
 		return origins;
 	}
 	getOriginsIndexed(){ return this.getOrigins(true);}
+
+	/**
+	 * Generate Weapon/Stickers skin Case list.
+	 * @return {Array.<Prefab>} List of Object. One object represent one case
+	 * @public
+	 */
+	getWeaponSkinCases(indexed) {
+		var self = this;
+		
+		self.logger.info('');
+		self.logger.info('');
+		self.logger.info('-----------------------------------------');
+		self.logger.info('--- Weapon Skin Cases List Generation ---');
+		self.logger.info('-----------------------------------------');
+		self.logger.info('');
+		return this._getItemsByPrefabViaSchema('weapon_case', 'case', indexed);
+	
+	}
+	getWeaponSkinCasesIndexed(){ return this.getWeaponSkinCases(true);}
 
 	/**
 	 * Generate Weapon/Stickers skin Case list.

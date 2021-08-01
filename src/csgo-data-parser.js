@@ -89,11 +89,7 @@ class CSGODataParser {
 		// ---- LANG FILE ---
 		var langFile = fs.readFileSync(this.langFilePath, 'utf16le');
 		this.langData = vdf.parse(langFile);
-		//Hack for tought Little Indian Character in object name after VDF.parse
-		//Little Indian Character here "-->\"lang\""
-		var littleEndianName = '\uFEFF\"lang\"';
-		this.langData.lang = this.langData[littleEndianName];
-		delete this.langData[littleEndianName];
+		this.langData.lang = this.langData['lang'];
 
 		// ---- ITEMGAME FILE ---
 		var itemsFile = fs.readFileSync(this.itemsFilePath, 'utf8');
